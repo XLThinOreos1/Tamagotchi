@@ -1,9 +1,9 @@
-
 public class Question
 {
     public string Text;
-    public List<string> Alternatives;
+    public List<int> Alternatives;
     public int CorrectAnswer;
+    Random generator = new Random();
 
     public bool Ask()
     {
@@ -11,7 +11,10 @@ public class Question
         Console.WriteLine(Text);
 
         // Visa alternativen (foreach)
-
+        foreach (int i in Alternatives)
+        {
+            Console.WriteLine(Alternatives[i]);
+        }
         // Läs in ett svar
 
         // om svaret är rätt, returnera true
